@@ -1,0 +1,3 @@
+REGION = 'us-east-1'
+SSM_PARAMS_PATH = 'configs/.test.env'
+PROJECT = '/serverless'
