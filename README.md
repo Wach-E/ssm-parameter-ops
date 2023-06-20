@@ -126,6 +126,7 @@ Current parameters...
 +------------------------------------+--------------+-----------+
 ```
 
-:::image type="content" source="snapshot.png" alt-text="Parameters uploaded from .env file":::
+![Parameters uploaded from .env file](snapshot.png)
 
-# Bonus section
+## Bonus section
+The private key for openssh as shown in the configs/.test.env appears on a single line. This approach was taken as AWS SSM Parameter store takes configs per line. The script used to convert this key from multiline to single line can be found in the [mult-_to_single](bonus/multi_to_single.py) file and the reverse can be found [here](bonus/single_to_multi.py)
