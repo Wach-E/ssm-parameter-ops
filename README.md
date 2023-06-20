@@ -22,6 +22,7 @@ Develop a python automation tool which can be used to upload all the secrets fro
 - IAM user created on AWS Management Console should have CRUD permissions for AWS KMS and SSM
 
 ## File Structure:
+```
 .
 ├── app.py
 ├── bonus
@@ -31,6 +32,7 @@ Develop a python automation tool which can be used to upload all the secrets fro
 ├── README.md
 ├── requirements.txt
 └── snapshot.png
+```
 
 ## Steps
 1. Clone this repo and navigate to the `ssm-parameter-ops`
