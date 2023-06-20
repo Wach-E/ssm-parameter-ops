@@ -21,7 +21,8 @@ Develop a python automation tool which can be used to upload all the secrets fro
 - Install [awscli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 - IAM user created on AWS Management Console should have CRUD permissions for AWS KMS and SSM
 
-## File Structure:
+## Project directory Structure:
+
 ```
 .
 ├── app.py
