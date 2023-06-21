@@ -20,6 +20,7 @@ Develop a python automation tool which can be used to upload all the secrets fro
     - Install dependencies: `$ pip3 install -r requirements.txt`
 - Install [awscli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 - IAM user created on AWS Management Console should have CRUD permissions for AWS KMS and SSM
+    - [Walkthrough of steps from ChatGPT](https://chat.openai.com/share/ea30fbca-f879-449b-9cdc-466d4e84abf3)
 
 ## Project directory Structure:
 
