@@ -1,6 +1,4 @@
-<img alt="Static Badge" src="https://img.shields.io/badge/Project_status-Done-green">
-<img alt="Static Badge" src="https://img.shields.io/badge/Documentation_status-In Progress-yellow">
-<img alt="Static Badge" src="https://img.shields.io/badge/Architecture_Diagram-ToDo-red">
+<img alt="Static Badge" src="https://img.shields.io/badge/Project_status-Done-green"><img alt="Static Badge" src="https://img.shields.io/badge/Documentation_status-In Progress-yellow"><img alt="Static Badge" src="https://img.shields.io/badge/Architecture_Diagram-ToDo-red">
 
 # Goal
 Develop a Python automation tool that can be used to upload all the secrets from a .env file to AWS (bulk upload). The script should also be able to overwrite the data if changed.
