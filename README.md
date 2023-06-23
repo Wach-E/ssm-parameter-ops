@@ -1,5 +1,9 @@
+<img alt="Static Badge" src="https://img.shields.io/badge/Project_status-Done-green">
+<img alt="Static Badge" src="https://img.shields.io/badge/Documentation_status-In Progress-yellow">
+<img alt="Static Badge" src="https://img.shields.io/badge/Architecture_Diagram-ToDo-red">
+
 # Goal
-Develop a python automation tool which can be used to upload all the secrets from a .env file to AWS (bulk upload). The script should also be able to overwrite the data if changed.
+Develop a Python automation tool that can be used to upload all the secrets from a .env file to AWS (bulk upload). The script should also be able to overwrite the data if changed.
 
 ## Thought Process:
 - With the file contents focused on key-value pair, the two services that will be best suited are **AWS Systems Manager Parameter Store (AWS SSM Parameter Store)** and **AWS DynamoDB**
@@ -9,20 +13,20 @@ Develop a python automation tool which can be used to upload all the secrets fro
         - Performance: If you require high-performance read and write operations on your environment variables, DynamoDB can provide greater scalability and throughput. However, for most use cases involving environment variables, Parameter Store's performance is sufficient.
         - Security and Encryption: Both Parameter Store and DynamoDB provide encryption options. However, Parameter Store has native integration with AWS Key Management Service (KMS), allowing you to easily encrypt and manage the keys used for parameter encryption.
     Considering the simplicity, cost-effectiveness, and suitability for storing environment variables, AWS Systems Manager Parameter Store is a preferred choice. It provides an easy-to-use, secure, and efficient solution specifically designed for managing configuration data, including environment variables.
-- **AWS Systems Manager Paramter Store** stores text using String, StringList and SecureString datatypes. The env file contains files with secrets which ought to be encrypted with **AWS Key Management System (AWS KMS)**
-    - **AWS KMS** is designed for creatings and contoling keys used to encrypt data in AWS services and application. It primarily focuses on key management and cryptographic operations.
+- **AWS Systems Manager Paramter Store** stores text using String, StringList, and SecureString datatypes. The env file contains files with secrets that ought to be encrypted with **AWS Key Management System (AWS KMS)**
+    - **AWS KMS** is designed for creating and controlling keys used to encrypt data in AWS services and applications. It primarily focuses on key management and cryptographic operations.
 - The IAM user configured on the workstation/machine should have appropriate permissions to AWS SSM Parameter Store and KMS services.
 
 ## Prerequisite
 - Install [python3](https://www.python.org/downloads/)
-- Intall pip3 based on your os 
+- Install pip3 based on your os 
     - Confirm installation of pip3: `$ pip3 --version`
     - Install dependencies: `$ pip3 install -r requirements.txt`
 - Install [awscli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 - IAM user created on AWS Management Console should have CRUD permissions for AWS KMS and SSM
     - [Walkthrough of steps from ChatGPT](https://chat.openai.com/share/ea30fbca-f879-449b-9cdc-466d4e84abf3)
 
-## Project directory Structure:
+## Project Directory Structure:
 
 ```
 .
@@ -43,7 +47,7 @@ $ git clone https://github.com/Wach-E/ssm-parameter-ops.git
 $ cd ssm-parameter-ops/
 ``` 
 
-2. Configure local workstation with IAM user credentials
+2. Configure the local workstation with IAM user credentials
 ```
 $ aws configure
 ----
@@ -57,7 +61,7 @@ mv configs/sample.txt .env
 ```
 You can modify this file based on your preference.
 
-4. Look through tool description
+4. Look through the tool description
 ```
 python3 app.py -h
 ---
@@ -133,4 +137,4 @@ Current parameters...
 ![Parameters uploaded from .env file](snapshot.png)
 
 ## Bonus section
-The private key for openssh as shown in the configs/.test.env appears in a single line. This approach was taken as AWS SSM Parameter store takes configs per line thus, with python. The script used to convert this key from multi-line to single line can be found in [multi_to_single.py](bonus/multi_to_single.py) file and the reverse script can be found in [single_to_multi.py](bonus/single_to_multi.py) file.
+The private key for Openssh as shown in the configs/.test.env appears in a single line. This approach was implemented as the AWS SSM Parameter store takes configs per line thus, with Python. The script used to convert this key from multi-line to single line can be found in [multi_to_single.py](bonus/multi_to_single.py) file and the reverse script can be found in [single_to_multi.py](bonus/single_to_multi.py) file.
