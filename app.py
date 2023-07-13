@@ -12,7 +12,7 @@ config_path = os.getenv('SSM_PARAMS_PATH')
 params_tld = os.getenv('PROJECT')
 
 parser = argparse.ArgumentParser(description='''
-SSM Automation Tool used to list current parameters and bulk upload of .env file in/to AWS SSM Parameter Store
+SSM Automation Tool is used to list the current parameters in AWS SSM Parameter Store and perform a bulk upload of the contents within a .env file whose location is specified by path.
 ''')
 
 parser.add_argument('first_operation', type=str, help='list all parameters in AWS SSM Parameter Store')
