@@ -15,7 +15,7 @@ Develop a Python automation tool that can be used to upload all the secrets from
     - **AWS KMS** is designed for creating and controlling keys used to encrypt data in AWS services and applications. It primarily focuses on key management and cryptographic operations.
 
 ## Article
-Detailed setup guide can be found [here](https://medium.com/@Wach_E/automating-aws-ssm-parameter-store-a-python-based-approach-for-managing-application-parameters-7f333e69b52a)
+The detailed guide for this project can be found [here](https://medium.com/@Wach_E/automating-aws-ssm-parameter-store-a-python-based-approach-for-managing-application-parameters-7f333e69b52a)
 
 ## Project Directory Structure:
 
@@ -42,23 +42,25 @@ $ cd ssm-parameter-ops/
 ```
 $ aws configure
 ----
-AWS ACCESS KEY ID: $iamUserAccessKeyId
-AWS_SECRET_ACCESS_KEY: $iamUsersecretKey
+$ AWS ACCESS KEY ID: $iamUserAccessKeyId
+$ AWS_SECRET_ACCESS_KEY: $iamUsersecretKey
 ```
 
 3. Create a .env file from configs/sample.txt
 ```
-mv configs/sample.txt .env
+$ mv configs/sample.txt .env
+$ pip3 install -r requirements.txt
+
 ```
 You can modify this file based on your preference.
 
 4. Look through the tool description
 ```
-python3 app.py -h
+$ python3 app.py -h
 ---
 usage: app.py [-h] first_operation [second_operation]
 
-SSM Automation Tool used to list current parameters and bulk upload of .env file in/to AWS SSM Parameter
+SSM Automation Tool used to list current parameters and bulk upload of the .env file specified by path to AWS SSM Parameter
 Store
 
 positional arguments:
