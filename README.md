@@ -60,8 +60,7 @@ $ python3 app.py -h
 ---
 usage: app.py [-h] first_operation [second_operation]
 
-SSM Automation Tool used to list current parameters and bulk upload of the .env file specified by path to AWS SSM Parameter
-Store
+SSM Automation Tool is used to list the current parameters in AWS SSM Parameter Store and perform a bulk upload of the contents within a .env file whose location is specified by path.
 
 positional arguments:
   first_operation   list all parameters in AWS SSM Parameter Store
