@@ -1,4 +1,4 @@
-<img alt="Static Badge" src="https://img.shields.io/badge/Project_status-Done-green">
+<img alt="Static Badge" src="https://img.shields.io/badge/Project_status-Done-green"><img alt="Static Badge" src="https://img.shields.io/badge/Article_status-Done-green">
 
 # Goal
 Develop a Python automation tool that can be used to upload all the secrets from a .env file to AWS (bulk upload). The script should also be able to overwrite the data if changed.
@@ -14,14 +14,8 @@ Develop a Python automation tool that can be used to upload all the secrets from
 - **AWS Systems Manager Paramter Store** stores text using String, StringList, and SecureString datatypes. The env file contains files with secrets that ought to be encrypted with **AWS Key Management System (AWS KMS)**. Since we would not have any need to make modifications to the KMS key, the [AWS-managed Key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-mgmt) will be used.
     - **AWS KMS** is designed for creating and controlling keys used to encrypt data in AWS services and applications. It primarily focuses on key management and cryptographic operations.
 
-## Prerequisite
-- Install [python3](https://www.python.org/downloads/)
-- Install pip3 based on your os 
-    - Confirm installation of pip3: `$ pip3 --version`
-    - Install dependencies: `$ pip3 install -r requirements.txt`
-- Install [awscli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-- IAM user created on AWS Management Console should have CRUD permissions for AWS KMS and SSM
-    - [Walkthrough of steps from ChatGPT](https://chat.openai.com/share/ea30fbca-f879-449b-9cdc-466d4e84abf3)
+## Article
+Detailed setup guide can be found [here](https://medium.com/@Wach_E/automating-aws-ssm-parameter-store-a-python-based-approach-for-managing-application-parameters-7f333e69b52a)
 
 ## Project Directory Structure:
 
